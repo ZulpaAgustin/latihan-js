@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Nilai Kelulusan</h1>
+    <hr />
+
+    <div>
+      <span>Masukan Angka</span>
+      <input type="text" id="angka" />
+    </div>
+
+    <button onclick="myFunction()">KIRIM</button>
+    <p id="tampilan"></p>
+
+    <script>
+      function myFunction() {
+        var angka = document.getElementById('angka').value;
+        var nilai = parseFloat(angka);
+
+        if (nilai > 90) {
+          document.writeln('Nilai Anda A');
+        } else if (nilai > 80) {
+          document.writeln('Nilai Anda B');
+        } else if (nilai > 70) {
+          document.writeln('Nilai Anda C');
+        } else {
+          document.writeln('Nilai Anda D');
+        }
+        document.getElementById('tampilan').innerHTML;
+      }
+    </script>
+  </body>
+</html>

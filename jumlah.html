@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #hasil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      button {
+        background-color: rgb(213, 89, 184);
+        color: rgb(252, 145, 220);
+        border-color: rgb(213, 89, 184);
+      }
+      h1 {
+        display: flex;
+        justify-content: center;
+        color: palevioletred;
+      }
+      form {
+        display: flex;
+        justify-content: center;
+      }
+      #angka1 {
+        padding: 5px;
+        margin: 5px;
+      }
+      #angka2 {
+        padding: 5px;
+        margin: 5px;
+      }
+      #ton {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kalkulator Online</h1>
+    <form>
+      <input type="text" id="angka1" placeholder="Masukan Angka Pertama" />
+      <input type="text" id="angka2" placeholder="Masukan Angka Kedua" />
+    </form>
+
+    <div id="ton">
+      <button onclick="myFunction()">Klik</button>
+    </div>
+    <div id="hasil" style="background-color: rgb(240, 18, 155); width: 300px; height: 100px; margin: auto; margin-top: 10px"></div>
+
+    <script>
+      function myFunction() {
+        var angka1 = parseFloat(document.getElementById('angka1').value);
+        var angka2 = parseFloat(document.getElementById('angka2').value);
+
+        var hasil = angka1 + angka2;
+
+        document.getElementById('hasil').textContent = +hasil;
+      }
+    </script>
+  </body>
+</html>

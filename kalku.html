@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Kalkulator Online</h1>
+    <form>
+      <input type="text" id="angka1" placeholder="Masukan Angka Pertama" />
+      <input type="text" id="angka2" placeholder="Masukan Angka Kedua" />
+      <br />
+      <button type="button" onclick="myFunction('tambah')">+</button>
+      <button type="button" onclick="myFunction('kurang')">-</button>
+      <button type="button" onclick="myFunction('kali')">x</button>
+      <button type="button" onclick="myFunction('bagi')">/</button>
+    </form>
+
+    <p>Hasil : <span id="hasil"></span></p>
+
+    <script>
+      function myFunction(operasi) {
+        const angka1 = parseFloat(document.getElementById('angka1').value);
+        const angka2 = parseFloat(document.getElementById('angka2').value);
+        let hasil = 0;
+
+        switch (operasi) {
+          case 'tambah':
+            hasil = angka1 + angka2;
+            break;
+          case 'kurang':
+            hasil = angka1 - angka2;
+            break;
+          case 'kali':
+            hasil = angka1 * angka2;
+            break;
+          case 'bagi':
+            if (angka2 == 0) {
+              hasil = 'tidak bisa';
+            } else {
+              hasil = angka1 / angka2;
+            }
+            break;
+        }
+
+        document.getElementById('hasil').textContent = hasil;
+      }
+    </script>
+  </body>
+</html>
